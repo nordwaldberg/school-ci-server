@@ -1,0 +1,40 @@
+@import 'src/variables';
+
+.content {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: $mobile-block-padding;
+  padding-right: $mobile-block-padding;
+}
+
+.content__icon {
+  width: 128px;
+  height: 128px;
+  align-self: center;
+  margin-bottom: 32px;
+}
+
+.content__text {
+  font-size: $base-text-fs;
+  text-align: center;
+  line-height: 16.25px;
+  margin-bottom: 24px;
+}
+
+.content__btn {
+  width: 123px;
+  height: 36px;
+  background-color: $accent-btn;
+  border-radius: $buttons-br;
+  align-self: center;
+}
+
+.content__btn:hover {
+  background-color: $accent-btn-hovered;
+}
+
+.content__btn:focus {
+  border: $buttons-border solid $accent-btn-border;
+}

@@ -1,0 +1,34 @@
+@import 'src/variables';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px $mobile-block-padding 12px $mobile-block-padding;
+}
+
+.header__text {
+  font-weight: 500;
+  padding: 2px;
+  font-size: $main-header-mobile-fs;
+  color: $submain-text-color;
+  line-height: 22px;
+  letter-spacing: 0.25px;
+}
+
+.header__btn {
+  width: 28px;
+  height: 28px;
+  padding: 8px;
+  border-radius: $buttons-br;
+  align-self: center;
+}
+
+.header__btn:hover {
+  background-color: $standard-btn-hovered;
+}
+
+.header__btn:focus {
+  padding: 6px;
+  border: $buttons-border solid $standard-btn-border;
+
+}

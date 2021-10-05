@@ -1,0 +1,32 @@
+@import 'src/variables';
+
+.footer {
+  padding: 12px $mobile-block-padding 12px $mobile-block-padding;
+  background-color: $footer-bg-color;
+  color: $submain-text-color;
+  font-size: $footer-text-fs;
+  bottom: 0;
+}
+
+.footer__link-list {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.footer__link {
+  line-height: 18px;
+  letter-spacing: 0.06px;
+  margin-right: 12px;
+}
+
+.footer__anchor {
+  color: $submain-text-color;
+}
+
+.footer__anchor:hover {
+  color: $hovered-link-color;
+}
+
+.footer__copyright-text {
+  line-height: 18px;
+}

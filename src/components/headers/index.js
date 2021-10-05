@@ -1,0 +1,1 @@
+export { default as StartPageHeader } from './start-page-header';

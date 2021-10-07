@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './start-page-header.module.scss';
-import cog from '../../../icons/cog.svg';
+import styles from './Header.module.scss';
+import cog from '../../../../icons/cog.svg';
 
-const StartPageHeader = () => {
+const Header = () => {
     return (
         <header className={styles['header']}>
             <h1 className={styles['header__text']}>School CI server</h1>
@@ -13,4 +13,4 @@ const StartPageHeader = () => {
     );
 };
 
-export default StartPageHeader;
+export default Header;

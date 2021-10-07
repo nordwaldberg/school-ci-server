@@ -1,22 +1,6 @@
-@import 'src/variables';
+@import 'variables';
+@import 'fonts';
 
-@font-face {
-  font-family:'YS Text';
-  font-weight:400;
-  font-style:normal;
-  font-stretch:normal;
-  src: url(//yastatic.net/s3/home/fonts/ys/1/text-regular.woff2) format('woff2'),
-  url(//yastatic.net/s3/home/fonts/ys/1/text-regular.woff) format('woff')
-}
-
-@font-face {
-  font-family:'YS Text';
-  font-weight:500;
-  font-style:normal;
-  font-stretch:normal;
-  src: url(//yastatic.net/s3/home/fonts/ys/1/text-medium.woff2) format('woff2'),
-  url(//yastatic.net/s3/home/fonts/ys/1/text-medium.woff) format('woff')
-}
 
 html, body {
   height: 100%;
@@ -26,7 +10,7 @@ html, body {
   min-height: 100%;
 }
 
-h1, p {
+h1, h2, p {
   margin: 0;
 }
 
@@ -41,6 +25,10 @@ li {
 
 a {
   text-decoration: none;
+}
+
+input {
+  border: 0;
 }
 
 button {

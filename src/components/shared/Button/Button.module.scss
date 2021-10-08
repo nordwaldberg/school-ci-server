@@ -1,11 +1,9 @@
 @import 'src/variables';
 
 .accentBtn {
-  height: 36px;
-  max-width: 474px;
   border-radius: $buttons-br;
   background-color: $accent-btn;
-  margin-bottom: 12px;
+  padding: 0 20px 0 20px;
 }
 
 .accentBtn:hover {
@@ -21,10 +19,9 @@
 }
 
 .standardBtn {
-  height: 36px;
-  max-width: 474px;
   border-radius: $buttons-br;
   background-color: $standard-btn;
+  padding: 0 20px 0 20px;
 }
 
 .standardBtn:hover {

@@ -2,10 +2,10 @@ import React from 'react';
 import styles from './Button.module.scss';
 
 
-const Button = ({children, accent, compClass, disabled, handleClick}) => {
+const Button = ({children, accent, className, disabled, handleClick}) => {
     return (
         <button className={`${accent ? styles.accentBtn : styles.standardBtn}
-        ${compClass}`}
+        ${className}`}
                 disabled={disabled}
                 onClick={handleClick}>
             {children}

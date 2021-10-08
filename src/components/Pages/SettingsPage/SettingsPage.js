@@ -11,10 +11,10 @@ const SettingsPage = () => {
     const [repository, setRepository] = useState('');
     const [command, setCommand] = useState('');
     const [branch, setBranch] = useState('');
-    const [buttonState, setButtonState] = useState(false);
+    const [btnsDisabled, setBtnsDisabled] = useState(false);
 
     const save = () => {
-        setButtonState(!buttonState);
+        setBtnsDisabled(!btnsDisabled);
     }
 
     return (
@@ -72,18 +72,19 @@ const SettingsPage = () => {
                         <p className={styles.fieldText}>minutes</p>
                     </div>
                     <Button accent={true}
-                            compClass={styles.btn}
-                            value={buttonState}
+                            className={styles.btn}
+                            value={btnsDisabled}
                             handleClick={() => {
                                 if (repository !== '' && command !== '') {
                                     save();
                                 }
                             }}
-                            disabled={buttonState}>
+                            disabled={btnsDisabled}>
                         Save
                     </Button>
                     <Button accent={false}
-                            disabled={buttonState}>
+                            className={styles.btn}
+                            disabled={btnsDisabled}>
                         Cancel
                     </Button>
                 </form>

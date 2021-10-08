@@ -24,9 +24,14 @@
 }
 
 .btn {
-  width: 123px;
   height: 36px;
   background-color: $accent-btn;
   border-radius: $buttons-br;
   align-self: center;
+}
+
+@media (min-width: $min-desktop-width) {
+  .content {
+    min-height: calc(100vh - 86px);
+  }
 }

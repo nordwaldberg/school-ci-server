@@ -3,8 +3,8 @@ import styles from './Header.module.scss';
 
 const Header = () => {
     return (
-        <header className={styles['header']}>
-            <h1 className={styles['header__text']}>School CI server</h1>
+        <header className={styles.container}>
+            <h1 className={styles.text}>School CI server</h1>
         </header>
     );
 };

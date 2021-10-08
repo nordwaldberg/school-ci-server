@@ -1,32 +1,43 @@
-@import '../../../variables';
+@import 'src/variables';
 
-.footer {
+.pageFooter {
   padding: 12px $mobile-block-padding 12px $mobile-block-padding;
   background-color: $footer-bg-color;
   color: $submain-text-color;
   font-size: $footer-text-fs;
-  bottom: 0;
 }
 
-.footer__link-list {
+.linkList {
   display: flex;
   margin-bottom: 8px;
 }
 
-.footer__link {
+.listLink {
   line-height: 18px;
   letter-spacing: 0.06px;
   margin-right: 12px;
 }
 
-.footer__anchor {
+.anchor {
   color: $submain-text-color;
 }
 
-.footer__anchor:hover {
+.anchor:hover {
   color: $hovered-link-color;
 }
 
-.footer__copyright-text {
+.textCopyright {
   line-height: 18px;
+}
+
+@media (min-width: $min-desktop-width) {
+  .pageFooter {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px $desktop-block-padding 8px $desktop-block-padding;
+  }
+
+  .linkList {
+    margin-bottom: 0;
+  }
 }

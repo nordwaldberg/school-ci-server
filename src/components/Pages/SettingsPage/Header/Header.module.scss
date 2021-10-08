@@ -1,14 +1,25 @@
-@import '../../../../variables';
+@import 'src/variables';
 
-.header {
-  padding: 13px $mobile-block-padding 13px $mobile-block-padding;
+.container {
+  padding: 12px $mobile-block-padding 12px $mobile-block-padding;
 }
 
-.header__text {
+.text {
   font-weight: 500;
   padding: 2px;
   font-size: $main-header-mobile-fs;
   color: $submain-text-color;
   line-height: 22px;
   letter-spacing: 0.25px;
+}
+
+@media (min-width: $min-desktop-width) {
+  .container {
+    padding: 10px $desktop-block-padding 10px $desktop-block-padding;
+  }
+
+  .text {
+    font-size: $main-header-desktop-fs;
+    line-height: 28px;
+  }
 }

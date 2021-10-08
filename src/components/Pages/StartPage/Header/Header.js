@@ -1,13 +1,17 @@
 import React from 'react';
 import styles from './Header.module.scss';
-import cog from '../../../../icons/cog.svg';
+import {Link} from 'react-router-dom';
+import Cog from '../../../shared/Cog/Cog';
 
 const Header = () => {
     return (
-        <header className={styles['header']}>
-            <h1 className={styles['header__text']}>School CI server</h1>
-            <button className={styles['header__btn']}>
-                <img className={styles['header__btn__icon']}src={cog}/>
+        <header className={styles.pageHeader}>
+            <h1 className={styles.text}>School CI server</h1>
+            <button className={styles.settingsBtn}>
+                <Link to="/settings" className={styles.btnLink}>
+                    <Cog width="12" height="12" className={styles.btnIcon}/>
+                    <p className={styles.btnText}>Settings</p>
+                </Link>
             </button>
         </header>
     );

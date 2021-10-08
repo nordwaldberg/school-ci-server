@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './CrossMark.module.scss';
 
 const CrossMark = ({ fillColor, width, height }) => {
     return (

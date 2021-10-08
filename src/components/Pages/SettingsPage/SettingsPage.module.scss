@@ -32,9 +32,6 @@
   font-size: $base-text-fs;
 }
 
-
-
-
 .fieldWithText {
   display: flex;
   margin-bottom: 20px;
@@ -65,5 +62,12 @@
 }
 
 .btn {
+  height: 36px;
   margin-bottom: 12px;
+}
+
+@media (min-width: $min-desktop-width) {
+  .content {
+    min-height: calc(100vh - 106px);
+  }
 }

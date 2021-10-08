@@ -3,19 +3,19 @@ import styles from './Footer.module.scss';
 
 const Footer = () => {
     return (
-        <footer className={styles['footer']}>
-            <ul className={styles['footer__link-list']}>
-                <li className={styles['footer__link']}>
-                    <a href='' className={styles['footer__anchor']}>Support</a>
+        <footer className={styles.pageFooter}>
+            <ul className={styles.linkList}>
+                <li className={styles.listLink}>
+                    <a href='' className={styles.anchor}>Support</a>
                 </li>
-                <li className={styles['footer__link']}>
-                    <a href='' className={styles['footer__anchor']}>Learning</a>
+                <li className={styles.listLink}>
+                    <a href='' className={styles.anchor}>Learning</a>
                 </li>
-                <li className={styles['footer__link']}>
-                    <a href='' className={styles['footer__anchor']}>Русская версия</a>
+                <li className={styles.listLink}>
+                    <a href='' className={styles.anchor}>Русская версия</a>
                 </li>
             </ul>
-            <p className={styles['footer__copyright-text']}>&copy; 2020 Alina Lomakina</p>
+            <p className={styles.textCopyright}>&copy; 2020 Alina Lomakina</p>
         </footer>
     );
 };

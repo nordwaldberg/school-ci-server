@@ -18,7 +18,7 @@ const StartPage = () => {
                     Configure repository connection <br/>
                     and synchronisation settings
                 </p>
-                <Button accent={true} compClass={styles.btn}>
+                <Button accent={true} className={styles.btn}>
                     <Link to="/settings">Open settings</Link>
                 </Button>
             </main>

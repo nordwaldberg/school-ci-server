@@ -1,53 +1,53 @@
 @import '../../../variables';
 
-.form__field {
+.formField {
   display: flex;
   flex-direction: column;
   position: relative;
   max-width: 474px;
   margin-bottom: 18px;
-
-  &__label {
-    margin-bottom: 6px;
-  }
-
-  &__input {
-    font-family: "YS Text", sans-serif;
-    font-size: $base-text-fs;
-    height: 34px;
-    border: $buttons-border solid $form-field-border-color;
-    border-radius: $form-fields-br;
-    padding: 0 30px 0 13px;
-  }
-
-  &__input:focus {
-    outline-color: $form-field-border-focused-color;
-  }
-
-  &__input::-webkit-input-placeholder{
-    color: $form-field-border-color;
-  }
-
-
-  &__input:placeholder-shown + &__reset-btn{
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  &__reset-btn {
-    position: absolute;
-    display: block;
-    padding: 0;
-    margin-right: 8px;
-    width: 16px;
-    height: 16px;
-    top: 32px;
-    bottom: 0;
-    right: 5px;
-    background-color: transparent;
-  }
 }
 
-.required-field__icon {
+.label {
+  margin-bottom: 6px;
+}
+
+.requiredIcon {
   color: $form-field-required-sign;
+}
+
+.input {
+  font-family: "YS Text", sans-serif;
+  font-size: $base-text-fs;
+  height: 34px;
+  border: $buttons-border solid $form-field-border-color;
+  border-radius: $form-fields-br;
+  padding: 0 30px 0 13px;
+}
+
+.input:focus {
+  outline-color: $form-field-border-focused-color;
+}
+
+.input::-webkit-input-placeholder{
+  color: $form-field-border-color;
+}
+
+
+.input:placeholder-shown + .resetBtn {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.resetBtn {
+  position: absolute;
+  display: block;
+  padding: 0;
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  top: 32px;
+  bottom: 0;
+  right: 5px;
+  background-color: transparent;
 }

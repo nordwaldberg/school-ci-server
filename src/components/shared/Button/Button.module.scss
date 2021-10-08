@@ -1,0 +1,40 @@
+@import 'src/variables';
+
+.accentBtn {
+  height: 36px;
+  max-width: 474px;
+  border-radius: $buttons-br;
+  background-color: $accent-btn;
+  margin-bottom: 12px;
+}
+
+.accentBtn:hover {
+  background-color: $accent-btn-hovered;
+}
+
+.accentBtn:focus {
+  border: $buttons-border solid $accent-btn-border;
+}
+
+.accentBtn:disabled {
+  background-color: $disabled-btn;
+}
+
+.standardBtn {
+  height: 36px;
+  max-width: 474px;
+  border-radius: $buttons-br;
+  background-color: $standard-btn;
+}
+
+.standardBtn:hover {
+  background-color: $standard-btn-hovered;
+}
+
+.standardBtn:focus {
+  border: $buttons-border solid $standard-btn-border;
+}
+
+.standardBtn:disabled {
+  background-color: $disabled-btn;
+}

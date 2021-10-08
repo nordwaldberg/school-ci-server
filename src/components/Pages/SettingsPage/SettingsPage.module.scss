@@ -9,24 +9,24 @@
   margin-bottom: 20px;
 }
 
-.content__text {
+.text {
   margin-bottom: 14px;
-
-  &__header {
-    font-size: $subheader-fs;
-    font-weight: 700;
-    line-height: 20px;
-    margin-bottom: 8px;
-  }
-
-  &__paragraph {
-    font-size: $base-text-fs;
-    color: $submain-text-color;
-    line-height: 18px;
-  }
 }
 
-.settings-form {
+.textHeader {
+  font-size: $subheader-fs;
+  font-weight: 700;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+
+.textParagraph {
+  font-size: $base-text-fs;
+  color: $submain-text-color;
+  line-height: 18px;
+}
+
+.settingsForm {
   display: flex;
   flex-direction: column;
   font-size: $base-text-fs;
@@ -35,62 +35,35 @@
 
 
 
-.form__field_row {
+.fieldWithText {
   display: flex;
   margin-bottom: 20px;
-
-  &__input::-webkit-outer-spin-button,
-  &__input::-webkit-inner-spin-button {
-    display: none;
-  }
-
-  &__input {
-    box-sizing: border-box;
-    width: 52px;
-    height: 36px;
-    margin-right: 8px;
-    margin-left: 8px;
-    padding-left: 20px;
-    border: $buttons-border solid $form-field-border-color;
-    border-radius: $form-fields-br;
-  }
-
-  &__input:focus {
-    outline-color: $form-field-border-focused-color;
-  }
-
-  &__text {
-    align-self: center;
-  }
 }
 
-.form__btn_accent {
+.fieldText {
+  align-self: center;
+}
+
+.fieldInput::-webkit-outer-spin-button,
+.fieldInput::-webkit-inner-spin-button {
+  display: none;
+}
+
+.fieldInput {
+  box-sizing: border-box;
+  width: 52px;
   height: 36px;
-  max-width: 474px;
-  border-radius: $buttons-br;
-  background-color: $accent-btn;
+  margin-right: 8px;
+  margin-left: 8px;
+  padding-left: 20px;
+  border: $buttons-border solid $form-field-border-color;
+  border-radius: $form-fields-br;
+}
+
+.fieldInput:focus {
+  outline-color: $form-field-border-focused-color;
+}
+
+.btn {
   margin-bottom: 12px;
-}
-
-.form__btn_accent:hover {
-  background-color: $accent-btn-hovered;
-}
-
-.form__btn_accent:focus {
-  border: $buttons-border solid $accent-btn-border;
-}
-
-.form__btn {
-  height: 36px;
-  max-width: 474px;
-  border-radius: $buttons-br;
-  background-color: $standard-btn;
-}
-
-.form__btn:hover {
-  background-color: $standard-btn-hovered;
-}
-
-.form__btn:focus {
-  border: $buttons-border solid $standard-btn-border;
 }

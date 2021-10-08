@@ -5,6 +5,7 @@ import screwdriverAndWrench from '../../../icons/screwdriver_and_wrench.svg';
 import {Link} from 'react-router-dom';
 import Header from './Header/Header';
 import Footer from '../../shared/Footer/Footer';
+import Button from '../../shared/Button/Button';
 
 
 const StartPage = () => {
@@ -17,9 +18,9 @@ const StartPage = () => {
                     Configure repository connection <br/>
                     and synchronisation settings
                 </p>
-                <button className={styles['content__btn']}>
+                <Button accent={true} compClass={styles.btn}>
                     <Link to="/settings">Open settings</Link>
-                </button>
+                </Button>
             </main>
             <Footer/>
         </>

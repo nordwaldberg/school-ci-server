@@ -61,6 +61,11 @@
   outline-color: $form-field-border-focused-color;
 }
 
+.btnsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
 .btn {
   height: 36px;
   margin-bottom: 12px;
@@ -69,5 +74,15 @@
 @media (min-width: $min-desktop-width) {
   .content {
     min-height: calc(100vh - 106px);
+    padding-left: $desktop-block-padding;
+    padding-right: $desktop-block-padding;
+  }
+
+  .btnsContainer {
+    flex-direction: row;
+  }
+
+  .btn:last-of-type {
+    margin-left: 8px;
   }
 }

@@ -11,6 +11,7 @@ const SettingsPage = () => {
     const [repository, setRepository] = useState('');
     const [command, setCommand] = useState('');
     const [branch, setBranch] = useState('');
+    const [minutes, setMinutes] = useState(10);
     const [btnsDisabled, setBtnsDisabled] = useState(false);
 
     const save = () => {
@@ -24,7 +25,7 @@ const SettingsPage = () => {
                 <div className={styles.text}>
                     <h2 className={styles.textHeader}>Settings</h2>
                     <p className={styles.textParagraph}>
-                        Configure repository connection <br/>
+                        Configure repository connection
                         and synchronisation settings
                     </p>
                 </div>
@@ -68,25 +69,32 @@ const SettingsPage = () => {
                     <div className={styles.fieldWithText}>
                         <p className={styles.fieldText}>Synchronize every</p>
                         <input type="number" placeholder="10"
-                               className={styles.fieldInput}/>
+                               className={styles.fieldInput}
+                               onChange={(event) => {
+                                   setMinutes(event.target.value);
+                               }}
+                               value={minutes}
+                        />
                         <p className={styles.fieldText}>minutes</p>
                     </div>
-                    <Button accent={true}
-                            className={styles.btn}
-                            value={btnsDisabled}
-                            handleClick={() => {
-                                if (repository !== '' && command !== '') {
-                                    save();
-                                }
-                            }}
-                            disabled={btnsDisabled}>
-                        Save
-                    </Button>
-                    <Button accent={false}
-                            className={styles.btn}
-                            disabled={btnsDisabled}>
-                        Cancel
-                    </Button>
+                    <div className={styles.btnsContainer}>
+                        <Button accent={true}
+                                className={styles.btn}
+                                value={btnsDisabled}
+                                handleClick={() => {
+                                    if (repository !== '' && command !== '') {
+                                        save();
+                                    }
+                                }}
+                                disabled={btnsDisabled}>
+                            Save
+                        </Button>
+                        <Button accent={false}
+                                className={styles.btn}
+                                disabled={btnsDisabled}>
+                            Cancel
+                        </Button>
+                    </div>
                 </form>
             </main>
             <Footer/>

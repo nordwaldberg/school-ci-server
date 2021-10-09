@@ -1,0 +1,29 @@
+@import 'src/variables';
+
+.commitStateContainer {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.icon {
+  align-self: center;
+  margin-right: 9px;
+}
+
+.commitNumber {
+  font-weight: 500;
+  font-size: $commit-number-mobile-fs;
+  line-height: 16px;
+}
+
+.ok {
+  color: $ok-decor-color;
+}
+
+.inProgress {
+  color: $in-process-decor-color;
+}
+
+.err {
+  color: $err-decor-color;
+}

@@ -1,0 +1,10 @@
+@import 'src/variables';
+
+.dateContainer {
+  display: flex;
+}
+
+.date {
+  margin-left: 5px;
+  color: $submain-text-color;
+}

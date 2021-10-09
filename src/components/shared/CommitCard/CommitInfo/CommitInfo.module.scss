@@ -1,0 +1,15 @@
+@import 'src/variables';
+
+.commitInfoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.commitBranch {
+  margin-left: 4px;
+}
+
+.commitHash {
+  margin-left: 4px;
+  color: $submain-text-color;
+}

@@ -1,9 +1,52 @@
 @import 'src/variables';
 
-.card {}
+.card {
+  border: 1px solid $form-field-border-color;
+  border-radius: 6px;
+  padding: 16px 7px 16px 13px;
+  margin-bottom: 8px;
+  box-shadow: 0px 2px 1px 0px rgba(0,0,0,0.3);
+}
 
-.msgContainer {}
+.card:hover {
+  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
 
-.commitInfoContainer {}
+.msgContainer {
+  margin-bottom: 8px;
+}
 
-.dateContainer {}
+.message {
+  font-size: $subheader-fs;
+  padding-left: 23px;
+}
+
+.commitInfoContainer {
+  font-size: $base-text-fs;
+  line-height: 16px;
+  margin-left: 23px;
+  border-bottom: 1px solid $form-field-border-color;
+}
+
+.commitInfo {
+  margin-bottom: 8px;
+}
+
+.commitAuthor {
+  margin-bottom: 9px;
+}
+
+.dateContainer {
+  display: flex;
+  font-size: $base-text-fs;
+  line-height: 16px;
+  margin-top: 8px;
+  margin-left: 23px;
+}
+
+.date {}
+
+.timer {
+  margin-left: 10px;
+}

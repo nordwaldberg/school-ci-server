@@ -1,0 +1,10 @@
+@import 'src/variables';
+
+.timerContainer {
+  display: flex;
+}
+
+.timer {
+  color: $submain-text-color;
+  margin-left: 6px;
+}

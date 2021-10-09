@@ -10,14 +10,18 @@ import TimerInfo from './TimerInfo/TimerInfo';
 const CommitCard = ({state, number, message, branch, hash, author, date, period}) => {
     return (
         <div className={styles.card}>
-            <div className={styles.msgContainer}>
-                <CommitState state={state}
-                             number={number}/>
-                <p className={styles.message}>{message}</p>
-            </div>
-            <div className={styles.commitInfoContainer}>
-                <CommitInfo branch={branch} hash={hash} className={styles.commitInfo}/>
-                <AuthorInfo author={author} className={styles.commitAuthor}/>
+            <div>
+                <div className={styles.msgContainer}>
+                    <CommitState state={state}
+                                 number={number}
+                                 className={styles.commitState}
+                    />
+                    <p className={styles.message}>{message}</p>
+                </div>
+                <div className={styles.commitInfoContainer}>
+                    <CommitInfo branch={branch} hash={hash} className={styles.commitInfo}/>
+                    <AuthorInfo author={author} className={styles.commitAuthor}/>
+                </div>
             </div>
             <div className={styles.dateContainer}>
                 <DateInfo date={date} className={styles.date}/>

@@ -1,0 +1,22 @@
+@import 'src/variables';
+
+.content {
+  min-height: calc(100vh - 120px);
+  padding-left: $mobile-block-padding;
+  padding-right: $mobile-block-padding;
+}
+
+.showMoreBtn {
+  height: 28px;
+  padding-left: 13px;
+  padding-right: 13px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: $min-desktop-width) {
+  .content {
+    min-height: calc(100vh - 82px);
+    padding-left: $desktop-block-padding;
+    padding-right: $desktop-block-padding;
+  }
+}

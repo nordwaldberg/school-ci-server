@@ -6,13 +6,13 @@
   padding: 12px $mobile-block-padding 12px $mobile-block-padding;
 }
 
-.text {
-  font-weight: 500;
-  padding: 2px;
+.repoName {
   font-size: $main-header-mobile-fs;
-  color: $submain-text-color;
-  line-height: 22px;
-  letter-spacing: 0.25px;
+}
+
+.btnsContainer {
+  display: flex;
+  height: 28px;
 }
 
 .settingsBtn {
@@ -30,10 +30,6 @@
   border: $buttons-border solid $standard-btn-border;
 }
 
-.btnText {
-  display: none;
-}
-
 .btnIcon {}
 
 .btnLink {
@@ -41,31 +37,50 @@
   height: 12px;
 }
 
+.runBuildBtn {
+  padding: 5px 9px 5px 10px;
+  margin-right: 8px;
+  border-radius: $buttons-br;
+}
+
+.runBuildBtn:hover {
+  background-color: $standard-btn-hovered;
+}
+
+.runBuildBtn:focus {
+  padding: 7px 7px 7px 8px;
+  border: $buttons-border solid $standard-btn-border;
+}
+
+.runBtnIcon {
+  display: block;
+}
+
+.runBtnText {
+  display: none;
+}
+
 @media (min-width: $min-desktop-width) {
   .pageHeader {
     padding: 10px $desktop-block-padding 10px $desktop-block-padding;
   }
 
-  .text {
+  .repoName {
     font-size: $main-header-desktop-fs;
     line-height: 28px;
   }
 
-  .settingsBtn {
-    padding: 8px 13px 8px 8px;
-  }
-
-  .btnLink {
+  .runBuildBtn {
     display: flex;
     flex-direction: row;
     align-items: center;
   }
 
-  .btnText {
+  .runBtnText {
     display: block;
   }
 
-  .btnIcon {
-    margin-right: 5px;
+  .runBtnIcon {
+    margin-right: 6px;
   }
 }

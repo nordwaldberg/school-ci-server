@@ -1,14 +1,9 @@
 @import 'variables';
 @import 'fonts';
 
-
-html, body {
-  height: 100%;
-}
-
-#root {
-  min-height: 100%;
-}
+//#root {
+//  position: relative;
+//}
 
 h1, h2, p {
   margin: 0;

@@ -12,7 +12,8 @@ const FormField = ({
                        resetBtnHeight,
                        onInputChange,
                        handleClick,
-                       value
+                       value,
+                       className
                    }) => {
     return (
         <div className={styles.formField}>
@@ -23,7 +24,7 @@ const FormField = ({
                    className={styles.input} required={required}
                    onChange={onInputChange} value={value}
             />
-            <button type="button" className={styles.resetBtn} onClick={handleClick}>
+            <button type="button" className={`${styles.resetBtn} ${className}`} onClick={handleClick}>
                 <CrossMark fillColor={resetBtnColor} width={resetBtnWidth} height={resetBtnHeight}/>
             </button>
         </div>

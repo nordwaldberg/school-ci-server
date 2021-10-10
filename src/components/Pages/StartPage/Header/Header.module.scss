@@ -4,6 +4,12 @@
   display: flex;
   justify-content: space-between;
   padding: 12px $mobile-block-padding 12px $mobile-block-padding;
+
+  @media (min-width: $min-desktop-width) {
+    & {
+      padding: 10px $desktop-block-padding 10px $desktop-block-padding;
+    }
+  }
 }
 
 .text {
@@ -13,63 +19,68 @@
   color: $submain-text-color;
   line-height: 22px;
   letter-spacing: 0.25px;
+
+  @media (min-width: $min-desktop-width) {
+    & {
+      font-size: $main-header-desktop-fs;
+      line-height: 28px;
+    }
+  }
 }
 
 .settingsBtn {
   padding: 8px;
   border-radius: $buttons-br;
   align-self: center;
-}
 
-.settingsBtn:hover {
-  background-color: $standard-btn-hovered;
-}
+  &:hover {
+    background-color: $standard-btn-hovered;
 
-.settingsBtn:focus {
-  padding: 6px;
-  border: $buttons-border solid $standard-btn-border;
+  }
+
+  &:focus {
+    padding: 6px;
+    border: $buttons-border solid $standard-btn-border;
+  }
+
+  @media (min-width: $min-desktop-width) {
+    & {
+      padding: 8px 13px 8px 8px;
+    }
+
+    &:focus {
+      padding: 6px 11px 6px 6px;
+    }
+  }
 }
 
 .btnText {
   display: none;
+
+  @media (min-width: $min-desktop-width) {
+    & {
+      display: block;
+    }
+  }
 }
 
-.btnIcon {}
+.btnIcon {
+  @media (min-width: $min-desktop-width) {
+    & {
+      margin-right: 5px;
+    }
+  }
+}
 
 .btnLink {
   display: block;
   height: 12px;
-}
 
-@media (min-width: $min-desktop-width) {
-  .pageHeader {
-    padding: 10px $desktop-block-padding 10px $desktop-block-padding;
-  }
-
-  .text {
-    font-size: $main-header-desktop-fs;
-    line-height: 28px;
-  }
-
-  .settingsBtn {
-    padding: 8px 13px 8px 8px;
-  }
-
-  .settingsBtn:focus {
-    padding: 6px 11px 6px 6px;
-  }
-
-  .btnLink {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .btnText {
-    display: block;
-  }
-
-  .btnIcon {
-    margin-right: 5px;
+  @media (min-width: $min-desktop-width) {
+    & {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
   }
 }

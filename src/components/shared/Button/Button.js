@@ -7,7 +7,8 @@ const Button = ({children, accent, className, disabled, handleClick}) => {
         <button
             className={`${styles.btn} ${accent ? styles['btn--accent'] : styles['btn--standard']} ${className}`}
             disabled={disabled}
-            onClick={handleClick}>
+            onClick={handleClick}
+        >
             {children}
         </button>
     );

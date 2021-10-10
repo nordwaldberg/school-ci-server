@@ -5,19 +5,51 @@ import FormField from '../../shared/FormField/FormField';
 import Footer from '../../shared/Footer/Footer';
 import Button from '../../shared/Button/Button';
 import {useHistory} from 'react-router-dom';
+import {saveSettings} from '../../../requests';
+import {getSettingsFromStore, saveSettingsToStore} from '../../../store';
 
 
 const SettingsPage = () => {
+    const settings = getSettingsFromStore();
 
     const history = useHistory();
-    const [repository, setRepository] = useState('');
-    const [command, setCommand] = useState('');
-    const [branch, setBranch] = useState('');
-    const [minutes, setMinutes] = useState(10);
+
+    const [repository, setRepository] = useState(settings ? settings.repository : '');
+    const [command, setCommand] = useState(settings ? settings.command : '');
+    const [branch, setBranch] = useState(settings ? settings.branch : '');
+    const [minutes, setMinutes] = useState(settings ? settings.minutes : 10);
+
     const [btnsDisabled, setBtnsDisabled] = useState(false);
 
     const save = () => {
-        setBtnsDisabled(!btnsDisabled);
+        if (!repository || !command) {
+            return false;
+        }
+
+        const newSettings = {
+            repository,
+            command,
+            branch,
+            minutes
+        };
+
+        saveSettings(newSettings).then(() => {
+            saveSettingsToStore(newSettings);
+            alert('Settings saved');
+            history.push('/build-history');
+        }).catch(() => {
+            alert('We did not manage to save settings. Only allowed settings are: ' +
+                '    repository: \'test\',\n' +
+                '    command: \'npm run build\',\n' +
+                '    branch: \'master\',\n' +
+                '    minutes: 10,"');
+        }).finally(() => setBtnsDisabled(false));
+
+        setBtnsDisabled(true);
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
     }
 
     return (
@@ -31,7 +63,10 @@ const SettingsPage = () => {
                         and synchronisation settings
                     </p>
                 </div>
-                <form className={styles.settingsForm}>
+                <form
+                    className={styles.settingsForm}
+                    onSubmit={handleSubmit}
+                >
                     <FormField required={true}
                                labelText="GitHub repository"
                                placeholderText="user-name/repo-name"
@@ -83,11 +118,7 @@ const SettingsPage = () => {
                         <Button accent={true}
                                 className={styles.btn}
                                 value={btnsDisabled}
-                                handleClick={() => {
-                                    if (repository !== '' && command !== '') {
-                                        save();
-                                    }
-                                }}
+                                handleClick={save}
                                 disabled={btnsDisabled}>
                             Save
                         </Button>

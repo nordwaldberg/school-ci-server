@@ -7,6 +7,12 @@
   justify-content: center;
   padding-left: $mobile-block-padding;
   padding-right: $mobile-block-padding;
+
+  @media (min-width: $min-desktop-width) {
+    & {
+      min-height: calc(100vh - 86px);
+    }
+  }
 }
 
 .backgroundImage {
@@ -28,10 +34,4 @@
   background-color: $accent-btn;
   border-radius: $buttons-br;
   align-self: center;
-}
-
-@media (min-width: $min-desktop-width) {
-  .content {
-    min-height: calc(100vh - 86px);
-  }
 }

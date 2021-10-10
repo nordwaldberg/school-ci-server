@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import {settingsMock} from './mocks/settings';
+import {buildsMock} from './mocks/builds';
 
 
 export async function saveSettings(settings) {
@@ -8,6 +9,10 @@ export async function saveSettings(settings) {
     }
 
     return mockedFetch({result: 'Error'}, false);
+}
+
+export async function getBuilds() {
+    return mockedFetch(buildsMock);
 }
 
 function mockedFetch(answer, success = true, delay = 1500) {

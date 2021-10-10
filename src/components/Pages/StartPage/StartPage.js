@@ -1,11 +1,9 @@
 import React from 'react';
 import styles from './StartPage.module.scss';
 import screwdriverAndWrench from '../../../icons/screwdriver_and_wrench.svg';
-
-import {Link} from 'react-router-dom';
 import Header from './Header/Header';
 import Footer from '../../shared/Footer/Footer';
-import Button from '../../shared/Button/Button';
+import ButtonLink from '../../shared/ButtonLink/ButtonLink';
 
 
 const StartPage = () => {
@@ -18,9 +16,9 @@ const StartPage = () => {
                     Configure repository connection <br/>
                     and synchronisation settings
                 </p>
-                <Button accent={true} className={styles.btn}>
-                    <Link to="/settings">Open settings</Link>
-                </Button>
+                <ButtonLink accent={true} className={styles.btn} to="/settings">
+                    Open settings
+                </ButtonLink>
             </main>
             <Footer/>
         </>

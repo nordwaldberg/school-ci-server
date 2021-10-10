@@ -3,6 +3,7 @@
 .btn {
   border-radius: $buttons-br;
   padding: 0 20px 0 20px;
+  border: $buttons-border solid;
 
   &:disabled {
     background-color: $disabled-btn;
@@ -11,7 +12,7 @@
 
   &--accent {
     background-color: $accent-btn;
-    border: $buttons-border solid $accent-btn;
+    border-color: $accent-btn;
 
     &:hover {
       background-color: $accent-btn-hovered;
@@ -26,7 +27,7 @@
 
   &--standard {
     background-color: $standard-btn;
-    border: $buttons-border solid $standard-btn;
+    border-color: $standard-btn;
 
     &:hover {
       background-color: $standard-btn-hovered;

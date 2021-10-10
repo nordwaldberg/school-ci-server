@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <header className={styles.pageHeader}>
             <h1 className={styles.text}>School CI server</h1>
-            <SettingsButton adaptive />
+            <SettingsButton adaptive/>
         </header>
     );
 };

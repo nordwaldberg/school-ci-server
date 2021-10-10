@@ -3,6 +3,7 @@ import styles from './Header.module.scss';
 import Play from '../../../shared/Play/Play';
 import SettingsButton from '../../../shared/SettingsButton/SettingsButton';
 
+
 const Header = ({repoName, handleClick, value}) => {
     return (
         <header className={styles.pageHeader}>
@@ -15,7 +16,7 @@ const Header = ({repoName, handleClick, value}) => {
                     <Play width="9" height="10" className={styles.runBtnIcon}/>
                     <p className={styles.runBtnText}>Run build</p>
                 </button>
-                <SettingsButton />
+                <SettingsButton/>
             </div>
         </header>
     );

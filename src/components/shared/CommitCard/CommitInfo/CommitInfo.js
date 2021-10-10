@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './CommitInfo.module.scss';
 import Commit from '../../Commit/Commit';
 
+
 const CommitInfo = ({branch, hash, className}) => {
     return (
         <div className={`${styles.commitInfoContainer} ${className}`}>

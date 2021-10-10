@@ -5,7 +5,7 @@ import CrossMark from '../../CrossMark/CrossMark';
 // import styles from '../DateInfo/DateInfo.module.scss';
 
 const StateIcon = ({state, className}) => {
-    if ( state === 'ok') {
+    if (state === 'ok') {
         return <CheckMark fillColor="#00B341"
                           width="21"
                           height="21"

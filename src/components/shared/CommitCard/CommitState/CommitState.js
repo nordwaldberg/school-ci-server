@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './CommitState.module.scss';
 import StateIcon from '../StateIcon/StateIcon';
 
+
 const CommitState = ({state, number, className}) => {
     return (
         <div className={styles.commitStateContainer}>

@@ -5,11 +5,25 @@
   background-color: $footer-bg-color;
   color: $submain-text-color;
   font-size: $footer-text-fs;
+
+  @media (min-width: $min-desktop-width) {
+    & {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px $desktop-block-padding 8px $desktop-block-padding;
+    }
+  }
 }
 
 .linkList {
   display: flex;
   margin-bottom: 8px;
+
+  @media (min-width: $min-desktop-width) {
+    & {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .listLink {
@@ -20,24 +34,12 @@
 
 .anchor {
   color: $submain-text-color;
-}
 
-.anchor:hover {
-  color: $hovered-link-color;
+  &:hover {
+    color: $hovered-link-color;
+  }
 }
 
 .textCopyright {
   line-height: 18px;
-}
-
-@media (min-width: $min-desktop-width) {
-  .pageFooter {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px $desktop-block-padding 8px $desktop-block-padding;
-  }
-
-  .linkList {
-    margin-bottom: 0;
-  }
 }

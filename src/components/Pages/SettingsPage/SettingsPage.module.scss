@@ -7,6 +7,14 @@
   padding-left: $mobile-block-padding;
   padding-right: $mobile-block-padding;
   margin-bottom: 20px;
+
+  @media (min-width: $min-desktop-width) {
+    & {
+      min-height: calc(100vh - 106px);
+      padding-left: $desktop-block-padding;
+      padding-right: $desktop-block-padding;
+    }
+  }
 }
 
 .text {
@@ -64,25 +72,21 @@
 .btnsContainer {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $min-desktop-width) {
+    & {
+      flex-direction: row;
+    }
+  }
 }
 
 .btn {
   height: 36px;
   margin-bottom: 12px;
-}
 
-@media (min-width: $min-desktop-width) {
-  .content {
-    min-height: calc(100vh - 106px);
-    padding-left: $desktop-block-padding;
-    padding-right: $desktop-block-padding;
-  }
-
-  .btnsContainer {
-    flex-direction: row;
-  }
-
-  .btn:last-of-type {
-    margin-left: 8px;
+  @media (min-width: $min-desktop-width) {
+    &:last-of-type {
+      margin-left: 8px;
+    }
   }
 }

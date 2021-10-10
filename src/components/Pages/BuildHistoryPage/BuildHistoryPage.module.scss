@@ -1,13 +1,14 @@
 @import 'src/variables';
 
 .content {
-  min-height: calc(100vh - 120px);
+  min-height: calc(100vh - 128px);
   padding-left: $mobile-block-padding;
   padding-right: $mobile-block-padding;
+  margin-top: 8px;
 
   @media (min-width: $min-desktop-width) {
     & {
-      min-height: calc(100vh - 82px);
+      min-height: calc(100vh - 90px);
       padding-left: $desktop-block-padding;
       padding-right: $desktop-block-padding;
     }

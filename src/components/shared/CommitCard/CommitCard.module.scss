@@ -5,25 +5,53 @@
   border-radius: 6px;
   padding: 16px 7px 16px 13px;
   margin-bottom: 8px;
-  box-shadow: 0px 2px 1px 0px rgba(0,0,0,0.3);
-}
+  box-shadow: 0 2px 1px 0 rgba(0,0,0,0.3);
 
-.card:hover {
-  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.3);
-  cursor: pointer;
+  &:hover {
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.3);
+    cursor: pointer;
+  }
+
+  @media (min-width: $min-desktop-width) {
+    & {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 24px 12px 24px;
+    }
+  }
 }
 
 .msgContainer {
   margin-bottom: 8px;
+
+  @media (min-width: $min-desktop-width) {
+    & {
+      display: flex;
+      height: 20px;
+    }
+  }
 }
 
 .commitState {
   height: 16px;
+
+  @media (min-width: $min-desktop-width) {
+    & {
+      height: 20px;
+    }
+  }
 }
 
 .message {
   font-size: $subheader-fs;
   padding-left: 23px;
+
+  @media (min-width: $min-desktop-width) {
+    & {
+      padding-left: 10px;
+      line-height: 16px;
+    }
+  }
 }
 
 .commitInfoContainer {
@@ -33,14 +61,36 @@
   line-height: 16px;
   margin-left: 23px;
   border-bottom: 1px solid $form-field-border-color;
+
+  @media (min-width: $min-desktop-width) {
+    & {
+      flex-direction: row;
+      border-bottom: none;
+      margin-left: 31px;
+      height: 18px;
+      line-height: 18px;
+    }
+  }
 }
 
 .commitInfo {
   margin-bottom: 8px;
+
+  @media (min-width: $min-desktop-width) {
+    & {
+      margin: 0;
+    }
+  }
 }
 
 .commitAuthor {
   margin-bottom: 9px;
+
+  @media (min-width: $min-desktop-width) {
+    & {
+      margin: 0 0 0 10px;
+    }
+  }
 }
 
 .dateContainer {
@@ -49,60 +99,29 @@
   line-height: 16px;
   margin-top: 8px;
   margin-left: 23px;
+
+  @media (min-width: $min-desktop-width) {
+    & {
+      flex-direction: column;
+      margin: 0;
+    }
+  }
 }
 
-.date {}
+.date {
+  @media (min-width: $min-desktop-width) {
+    & {
+      margin-bottom: 12px;
+    }
+  }
+}
 
 .timer {
   margin-left: 10px;
-}
 
-@media (min-width: $min-desktop-width) {
-  .card {
-    display: flex;
-    justify-content: space-between;
-    padding: 12px 24px 12px 24px;
-  }
-
-  .msgContainer {
-    display: flex;
-    height: 20px;
-  }
-
-  .commitState {
-    height: 20px;
-  }
-
-  .message {
-    padding-left: 10px;
-    line-height: 16px;
-  }
-
-  .commitInfoContainer {
-    flex-direction: row;
-    border-bottom: none;
-    margin-left: 31px;
-    height: 18px;
-    line-height: 18px;
-  }
-  .commitInfo {
-    margin: 0;
-  }
-
-  .commitAuthor {
-    margin: 0 0 0 10px;
-  }
-
-  .dateContainer {
-    flex-direction: column;
-    margin: 0;
-  }
-
-  .date {
-    margin-bottom: 12px;
-  }
-
-  .timer {
-    margin-left: 0;
+  @media (min-width: $min-desktop-width) {
+    & {
+      margin-left: 0;
+    }
   }
 }

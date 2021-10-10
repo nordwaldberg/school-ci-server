@@ -4,10 +4,12 @@ import Header from './Header/Header';
 import FormField from '../../shared/FormField/FormField';
 import Footer from '../../shared/Footer/Footer';
 import Button from '../../shared/Button/Button';
+import {useHistory} from 'react-router-dom';
 
 
 const SettingsPage = () => {
 
+    const history = useHistory();
     const [repository, setRepository] = useState('');
     const [command, setCommand] = useState('');
     const [branch, setBranch] = useState('');
@@ -91,7 +93,9 @@ const SettingsPage = () => {
                         </Button>
                         <Button accent={false}
                                 className={styles.btn}
-                                disabled={btnsDisabled}>
+                                disabled={btnsDisabled}
+                                handleClick={() => history.goBack()}
+                        >
                             Cancel
                         </Button>
                     </div>

@@ -4,17 +4,20 @@ import Header from './Header/Header';
 import Footer from '../../shared/Footer/Footer';
 import Button from '../../shared/Button/Button';
 import ModalWindow from '../../shared/ModalWindow/ModalWindow';
-import {getBuilds} from '../../../requests';
 import CommitCard from '../../shared/CommitCard/CommitCard';
+import {useDispatch, useSelector} from 'react-redux';
+import {fetchBuilds} from '../../../store/async-actions/fetch-builds';
 
 
 const BuildHistoryPage = () => {
-    const [builds, setBuilds] = useState([]);
+    const builds = useSelector((state) => state.builds);
+    const dispatch = useDispatch();
+
     const [modalShow, setModalShow] = useState(false);
     const [commitHash, setCommitHash] = useState('');
 
     if (builds.length === 0) {
-        getBuilds().then(setBuilds);
+        dispatch(fetchBuilds());
     }
 
     const commitCardsList = builds.map(build => {

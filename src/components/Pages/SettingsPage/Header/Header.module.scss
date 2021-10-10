@@ -2,6 +2,12 @@
 
 .container {
   padding: 12px $mobile-block-padding 12px $mobile-block-padding;
+
+  @media (min-width: $min-desktop-width) {
+    & {
+      padding: 10px $desktop-block-padding 10px $desktop-block-padding;
+    }
+  }
 }
 
 .text {
@@ -11,15 +17,12 @@
   color: $submain-text-color;
   line-height: 22px;
   letter-spacing: 0.25px;
-}
 
-@media (min-width: $min-desktop-width) {
-  .container {
-    padding: 10px $desktop-block-padding 10px $desktop-block-padding;
-  }
-
-  .text {
-    font-size: $main-header-desktop-fs;
-    line-height: 28px;
+  @media (min-width: $min-desktop-width) {
+    & {
+      font-size: $main-header-desktop-fs;
+      line-height: 28px;
+    }
   }
 }
+

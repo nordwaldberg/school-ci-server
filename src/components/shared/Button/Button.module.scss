@@ -5,21 +5,21 @@
   background-color: $accent-btn;
   border: $buttons-border solid $accent-btn;
   padding: 0 20px 0 20px;
-}
 
-.accentBtn:hover {
-  background-color: $accent-btn-hovered;
-  border-color: $accent-btn-hovered;
-}
+  &:hover {
+    background-color: $accent-btn-hovered;
+    border-color: $accent-btn-hovered;
+  }
 
-.accentBtn:focus {
-  background-color: $accent-btn;
-  border-color: $accent-btn-border;
-}
+  &:focus {
+    background-color: $accent-btn;
+    border-color: $accent-btn-border;
+  }
 
-.accentBtn:disabled {
-  background-color: $disabled-btn;
-  border-color: $disabled-btn;
+  &:disabled {
+    background-color: $disabled-btn;
+    border-color: $disabled-btn;
+  }
 }
 
 .standardBtn {
@@ -27,19 +27,19 @@
   background-color: $standard-btn;
   padding: 0 20px 0 20px;
   border: $buttons-border solid $standard-btn;
-}
+  
+  &:hover {
+    background-color: $standard-btn-hovered;
+    border-color: $standard-btn-hovered;
+  }
 
-.standardBtn:hover {
-  background-color: $standard-btn-hovered;
-  border-color: $standard-btn-hovered;
-}
+  &:focus {
+    background-color: $standard-btn;
+    border-color: $standard-btn-border;
+  }
 
-.standardBtn:focus {
-  background-color: $standard-btn;
-  border-color: $standard-btn-border;
-}
-
-.standardBtn:disabled {
-  background-color: $disabled-btn;
-  border-color: $disabled-btn;
+  &:disabled {
+    background-color: $disabled-btn;
+    border-color: $disabled-btn;
+  }
 }

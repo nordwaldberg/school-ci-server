@@ -4,10 +4,23 @@
   display: flex;
   justify-content: space-between;
   padding: 12px $mobile-block-padding 12px $mobile-block-padding;
+
+  @media (min-width: $min-desktop-width) {
+    & {
+      padding: 10px $desktop-block-padding 10px $desktop-block-padding;
+    }
+  }
 }
 
 .repoName {
   font-size: $main-header-mobile-fs;
+
+  @media (min-width: $min-desktop-width) {
+    & {
+      font-size: $main-header-desktop-fs;
+      line-height: 28px;
+    }
+  }
 }
 
 .btnsContainer {
@@ -19,18 +32,19 @@
   padding: 8px;
   border-radius: $buttons-br;
   align-self: center;
+
+  &:hover {
+    background-color: $standard-btn-hovered;
+  }
+
+  &:focus {
+    padding: 6px;
+    border: $buttons-border solid $standard-btn-border;
+  }
 }
 
-.settingsBtn:hover {
-  background-color: $standard-btn-hovered;
+.btnIcon {
 }
-
-.settingsBtn:focus {
-  padding: 6px;
-  border: $buttons-border solid $standard-btn-border;
-}
-
-.btnIcon {}
 
 .btnLink {
   display: block;
@@ -41,46 +55,41 @@
   padding: 5px 9px 5px 10px;
   margin-right: 8px;
   border-radius: $buttons-br;
-}
 
-.runBuildBtn:hover {
-  background-color: $standard-btn-hovered;
-}
+  &:hover {
+    background-color: $standard-btn-hovered;
+  }
 
-.runBuildBtn:focus {
-  padding: 7px 7px 7px 8px;
-  border: $buttons-border solid $standard-btn-border;
+  &:focus {
+    padding: 7px 7px 7px 8px;
+    border: $buttons-border solid $standard-btn-border;
+  }
+
+  @media (min-width: $min-desktop-width) {
+    & {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
 }
 
 .runBtnIcon {
   display: block;
+
+  @media (min-width: $min-desktop-width) {
+    & {
+      margin-right: 6px;
+    }
+  }
 }
 
 .runBtnText {
   display: none;
-}
 
-@media (min-width: $min-desktop-width) {
-  .pageHeader {
-    padding: 10px $desktop-block-padding 10px $desktop-block-padding;
-  }
-
-  .repoName {
-    font-size: $main-header-desktop-fs;
-    line-height: 28px;
-  }
-
-  .runBuildBtn {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .runBtnText {
-    display: block;
-  }
-
-  .runBtnIcon {
-    margin-right: 6px;
+  @media (min-width: $min-desktop-width) {
+    & {
+      display: block;
+    }
   }
 }

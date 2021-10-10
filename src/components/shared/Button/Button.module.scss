@@ -1,45 +1,41 @@
 @import 'src/variables';
 
-.accentBtn {
+.btn {
   border-radius: $buttons-br;
-  background-color: $accent-btn;
-  border: $buttons-border solid $accent-btn;
   padding: 0 20px 0 20px;
 
-  &:hover {
-    background-color: $accent-btn-hovered;
-    border-color: $accent-btn-hovered;
+  &:disabled {
+    background-color: $disabled-btn;
+    border-color: $disabled-btn;
   }
 
-  &:focus {
+  &--accent {
     background-color: $accent-btn;
-    border-color: $accent-btn-border;
+    border: $buttons-border solid $accent-btn;
+
+    &:hover {
+      background-color: $accent-btn-hovered;
+      border-color: $accent-btn-hovered;
+    }
+
+    &:focus {
+      background-color: $accent-btn;
+      border-color: $accent-btn-border;
+    }
   }
 
-  &:disabled {
-    background-color: $disabled-btn;
-    border-color: $disabled-btn;
-  }
-}
-
-.standardBtn {
-  border-radius: $buttons-br;
-  background-color: $standard-btn;
-  padding: 0 20px 0 20px;
-  border: $buttons-border solid $standard-btn;
-  
-  &:hover {
-    background-color: $standard-btn-hovered;
-    border-color: $standard-btn-hovered;
-  }
-
-  &:focus {
+  &--standard {
     background-color: $standard-btn;
-    border-color: $standard-btn-border;
-  }
+    border: $buttons-border solid $standard-btn;
 
-  &:disabled {
-    background-color: $disabled-btn;
-    border-color: $disabled-btn;
+    &:hover {
+      background-color: $standard-btn-hovered;
+      border-color: $standard-btn-hovered;
+    }
+
+    &:focus {
+      background-color: $standard-btn;
+      border-color: $standard-btn-border;
+    }
   }
 }

@@ -4,10 +4,10 @@ import styles from './Button.module.scss';
 
 const Button = ({children, accent, className, disabled, handleClick}) => {
     return (
-        <button className={`${accent ? styles.accentBtn : styles.standardBtn}
-        ${className}`}
-                disabled={disabled}
-                onClick={handleClick}>
+        <button
+            className={`${styles.btn} ${accent ? styles['btn--accent'] : styles['btn--standard']} ${className}`}
+            disabled={disabled}
+            onClick={handleClick}>
             {children}
         </button>
     );

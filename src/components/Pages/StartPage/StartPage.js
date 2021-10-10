@@ -6,12 +6,14 @@ import Footer from '../../shared/Footer/Footer';
 import ButtonLink from '../../shared/ButtonLink/ButtonLink';
 import {useHistory} from 'react-router-dom';
 import {useSelector} from 'react-redux';
+import _ from 'lodash';
+import {defaultSettings} from '../../../store/defaults/settings';
 
 
 const StartPage = () => {
     const history = useHistory();
 
-    if (useSelector((state) => state.settings)) {
+    if (!_.isEqual(useSelector((state) => state.settings), defaultSettings)) {
         history.push('/build-history');
     }
 

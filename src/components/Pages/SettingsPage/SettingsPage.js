@@ -15,10 +15,10 @@ const SettingsPage = () => {
 
     const history = useHistory();
 
-    const [repository, setRepository] = useState(settings ? settings.repository : '');
-    const [command, setCommand] = useState(settings ? settings.command : '');
-    const [branch, setBranch] = useState(settings ? settings.branch : '');
-    const [minutes, setMinutes] = useState(settings ? settings.minutes : 10);
+    const [repository, setRepository] = useState(settings.repository);
+    const [command, setCommand] = useState(settings.command);
+    const [branch, setBranch] = useState(settings.branch);
+    const [minutes, setMinutes] = useState(settings.minutes);
 
     const [btnsDisabled, setBtnsDisabled] = useState(false);
 

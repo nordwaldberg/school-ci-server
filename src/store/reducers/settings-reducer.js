@@ -1,7 +1,8 @@
 import {getSettingsFromLocalStorage, saveSettingsToLocalStorage} from '../helpers';
+import {defaultSettings} from '../defaults/settings';
 
 
-const defaultState = getSettingsFromLocalStorage();
+const defaultState = getSettingsFromLocalStorage() || defaultSettings;
 
 const settingsReducer = (state = defaultState, action) => {
     switch (action.type) {

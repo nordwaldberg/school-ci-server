@@ -3,6 +3,7 @@
 .pageHeader {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 12px $mobile-block-padding 12px $mobile-block-padding;
 
   @media (min-width: $min-desktop-width) {
@@ -24,63 +25,6 @@
     & {
       font-size: $main-header-desktop-fs;
       line-height: 28px;
-    }
-  }
-}
-
-.settingsBtn {
-  padding: 8px;
-  border-radius: $buttons-br;
-  align-self: center;
-
-  &:hover {
-    background-color: $standard-btn-hovered;
-
-  }
-
-  &:focus {
-    padding: 6px;
-    border: $buttons-border solid $standard-btn-border;
-  }
-
-  @media (min-width: $min-desktop-width) {
-    & {
-      padding: 8px 13px 8px 8px;
-    }
-
-    &:focus {
-      padding: 6px 11px 6px 6px;
-    }
-  }
-}
-
-.btnText {
-  display: none;
-
-  @media (min-width: $min-desktop-width) {
-    & {
-      display: block;
-    }
-  }
-}
-
-.btnIcon {
-  @media (min-width: $min-desktop-width) {
-    & {
-      margin-right: 5px;
-    }
-  }
-}
-
-.btnLink {
-  display: block;
-  height: 12px;
-
-  @media (min-width: $min-desktop-width) {
-    & {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
     }
   }
 }

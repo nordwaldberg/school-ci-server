@@ -3,6 +3,7 @@
 .pageHeader {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 12px $mobile-block-padding 12px $mobile-block-padding;
 
   @media (min-width: $min-desktop-width) {
@@ -26,29 +27,6 @@
 .btnsContainer {
   display: flex;
   height: 28px;
-}
-
-.settingsBtn {
-  border-radius: $buttons-br;
-  align-self: center;
-
-  &:hover {
-    background-color: $standard-btn-hovered;
-  }
-
-  &:focus {
-    padding: 6px;
-    border: $buttons-border solid $standard-btn-border;
-  }
-}
-
-.btnIcon {
-}
-
-.btnLink {
-  display: block;
-  height: 12px;
-  padding: 8px;
 }
 
 .runBuildBtn {

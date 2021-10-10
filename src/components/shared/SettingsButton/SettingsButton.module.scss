@@ -1,0 +1,44 @@
+@import 'src/variables';
+
+.btn {
+  border-radius: $buttons-br;
+  height: 28px;
+  border: $buttons-border solid $standard-btn;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $standard-btn;
+
+  &--non-adaptive {
+    width: 28px;
+  }
+
+  &--adaptive {
+    min-width: 28px;
+
+    @media (min-width: $min-desktop-width) {
+      padding-right: 13px;
+      padding-left: 8px;
+    }
+  }
+
+  &:hover {
+    background-color: $standard-btn-hovered;
+    border-color: $standard-btn-hovered;
+  }
+
+  &:focus {
+    border-color: $standard-btn-border;
+  }
+}
+
+.btnText {
+  display: none;
+
+  @media (min-width: $min-desktop-width) {
+    & {
+      display: block;
+      margin-left: 5px;
+    }
+  }
+}

@@ -1,9 +1,6 @@
 @import '../../../variables';
 
 .formField {
-  display: flex;
-  flex-direction: column;
-  position: relative;
   margin-bottom: 18px;
 
   @media (min-width: $min-desktop-width) {
@@ -15,6 +12,7 @@
 }
 
 .label {
+  display: block;
   margin-bottom: 6px;
 }
 
@@ -22,13 +20,18 @@
   color: $form-field-required-sign;
 }
 
+.inputWrapper {
+  position: relative;
+}
+
 .input {
   font-family: "YS Text", sans-serif;
   font-size: $base-text-fs;
-  height: 34px;
+  height: 36px;
   border: $buttons-border solid $form-field-border-color;
   border-radius: $form-fields-br;
-  padding: 0 30px 0 13px;
+  padding: 0 36px 0 13px;
+  width: 100%;
 
   &:focus {
     outline-color: $form-field-border-focused-color;
@@ -48,11 +51,10 @@
   position: absolute;
   display: block;
   padding: 0;
-  margin-right: 8px;
   width: 16px;
   height: 16px;
-  top: 32px;
+  top: 10px;
+  right: 10px;
   bottom: 0;
-  right: 5px;
   background-color: transparent;
 }

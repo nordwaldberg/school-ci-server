@@ -20,13 +20,15 @@ const FormField = ({
             <label className={styles.label}>
                 {labelText} {required ? <span className={styles.requiredIcon}>*</span> : null}
             </label>
-            <input type="text" placeholder={placeholderText}
-                   className={styles.input} required={required}
-                   onChange={onInputChange} value={value}
-            />
-            <button type="button" className={`${styles.resetBtn} ${className}`} onClick={handleClick}>
-                <CrossMark fillColor={resetBtnColor} width={resetBtnWidth} height={resetBtnHeight}/>
-            </button>
+            <div className={styles.inputWrapper}>
+                <input type="text" placeholder={placeholderText}
+                       className={styles.input} required={required}
+                       onChange={onInputChange} value={value}
+                />
+                <button type="button" className={`${styles.resetBtn} ${className}`} onClick={handleClick}>
+                    <CrossMark fillColor={resetBtnColor} width={resetBtnWidth} height={resetBtnHeight}/>
+                </button>
+            </div>
         </div>
     );
 };

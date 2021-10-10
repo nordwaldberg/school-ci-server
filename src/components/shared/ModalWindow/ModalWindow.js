@@ -23,7 +23,6 @@ const ModalWindow = ({
                        resetBtnColor="#CCCCCC"
                        resetBtnWidth="16"
                        resetBtnHeight="16"
-                       className={styles.modalResetBtn}
                        onInputChange={onInputChange}
                        value={commitHashValue}
                        handleClick={handleClickOnFormFieldCrossMark}/>

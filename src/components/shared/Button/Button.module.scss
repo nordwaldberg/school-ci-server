@@ -5,11 +5,6 @@
   padding: 0 20px 0 20px;
   border: $buttons-border solid;
 
-  &:disabled {
-    background-color: $disabled-btn;
-    border-color: $disabled-btn;
-  }
-
   &--accent {
     background-color: $accent-btn;
     border-color: $accent-btn;
@@ -38,5 +33,10 @@
       background-color: $standard-btn;
       border-color: $standard-btn-border;
     }
+  }
+
+  &:disabled {
+    background-color: $disabled-btn;
+    border-color: $disabled-btn;
   }
 }

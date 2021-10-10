@@ -17,9 +17,9 @@ const BuildHistoryPage = () => {
         getBuilds().then(setBuilds);
     }
 
-    const commitCards = builds.map(build => {
+    const commitCardsList = builds.map(build => {
         return (
-            <CommitCard {...build} />
+            <CommitCard {...build} key={Number(build.number)}/>
         );
     });
 
@@ -39,7 +39,7 @@ const BuildHistoryPage = () => {
                     handleClick={() => setModalShow(!modalShow)}
             />
             <main className={styles.content}>
-                {commitCards}
+                {commitCardsList}
                 <Button accent={false} className={styles.showMoreBtn}>Show more</Button>
             </main>
             <Footer/>

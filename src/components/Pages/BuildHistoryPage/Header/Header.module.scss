@@ -29,7 +29,6 @@
 }
 
 .settingsBtn {
-  padding: 8px;
   border-radius: $buttons-br;
   align-self: center;
 
@@ -49,6 +48,7 @@
 .btnLink {
   display: block;
   height: 12px;
+  padding: 8px;
 }
 
 .runBuildBtn {

@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {useDispatch, useSelector} from 'react-redux'
 import styles from './SettingsPage.module.scss';
 import Header from './Header/Header';
 import FormField from '../../shared/FormField/FormField';
@@ -6,11 +7,11 @@ import Footer from '../../shared/Footer/Footer';
 import Button from '../../shared/Button/Button';
 import {useHistory} from 'react-router-dom';
 import {saveSettings} from '../../../requests';
-import {getSettingsFromStore, saveSettingsToStore} from '../../../store';
 
 
 const SettingsPage = () => {
-    const settings = getSettingsFromStore();
+    const settings = useSelector((state) => state.settings);
+    const dispatch = useDispatch();
 
     const history = useHistory();
 
@@ -34,7 +35,7 @@ const SettingsPage = () => {
         };
 
         saveSettings(newSettings).then(() => {
-            saveSettingsToStore(newSettings);
+            dispatch({type: 'SAVE_SETTINGS', payload: newSettings});
             alert('Settings saved');
             history.push('/build-history');
         }).catch(() => {

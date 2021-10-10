@@ -4,14 +4,14 @@ import screwdriverAndWrench from '../../../icons/screwdriver_and_wrench.svg';
 import Header from './Header/Header';
 import Footer from '../../shared/Footer/Footer';
 import ButtonLink from '../../shared/ButtonLink/ButtonLink';
-import {getSettingsFromStore} from '../../../store';
 import {useHistory} from 'react-router-dom';
+import {useSelector} from 'react-redux';
 
 
 const StartPage = () => {
     const history = useHistory();
 
-    if (getSettingsFromStore()) {
+    if (useSelector((state) => state.settings)) {
         history.push('/build-history');
     }
 
